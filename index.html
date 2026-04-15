@@ -3,239 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Daffa Muhammad Safwan</title>
+    <title>Biodata | Daffa Muhammad Safwan</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-            --accent-blue: #00d2ff;
-            --accent-green: #10b981;
-            --bg-dark: #0f172a;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --text-light: #f8fafc;
+        /* CSS STYLING */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 35%),
-                radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.15) 0%, transparent 35%);
-            color: var(--text-light);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3436;
+            line-height: 1.6;
             padding: 40px 20px;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
-            width: 100%;
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px;
             border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
         }
 
-        /* Header Section */
-        .header {
+        /* Header & Foto */
+        header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border: 3px solid var(--accent-blue);
-            padding: 5px;
-            background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
-                        var(--primary-gradient) border-box;
-            margin-bottom: 20px;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            border-radius: 50%;
+            border: 8px solid #f0f2f5;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         h1 {
             font-size: 2.2rem;
-            margin-bottom: 5px;
-            background: linear-gradient(to right, #fff, var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
-        /* Bio & Info Table */
-        .bio-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .highlight {
+            color: #0984e3; /* Warna biru profesional */
         }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+        .badge {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #01579b;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Section Styling */
+        .section {
             margin-bottom: 40px;
         }
 
-        .info-item {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 15px;
-            border-radius: 12px;
-            border-bottom: 2px solid var(--accent-blue);
-        }
-
-        .info-item span {
-            display: block;
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.5);
-            text-transform: uppercase;
-        }
-
-        .info-item p { font-weight: 500; font-size: 0.9rem; }
-
-        /* Separated Sections: Hobbies & Favorites */
-        .interest-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .interest-card {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .interest-card h3 {
-            font-size: 1.1rem;
+        h2 {
+            font-size: 1.3rem;
+            color: #0984e3;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            color: var(--accent-blue);
         }
 
-        .interest-card.fav h3 { color: var(--accent-green); }
-
-        .list-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: #eee;
+            margin-left: 15px;
         }
 
-        .list-item i {
-            width: 30px;
-            height: 30px;
-            background: rgba(255, 255, 255, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-size: 0.8rem;
+        /* Table Styling */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .label {
+            font-weight: 600;
+            width: 30%;
+            color: #636e72;
+        }
+
+        /* List Styling */
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        ul {
+            list-style: none;
+            padding-top: 10px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #0984e3;
         }
 
         /* Footer */
-        .footer {
+        footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.3);
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #b2bec3;
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .interest-section { grid-template-columns: 1fr; }
-            .container { padding: 25px; }
+        /* Responsive */
+        @media (max-width: 650px) {
+            .grid-info { grid-template-columns: 1fr; }
+            .container { padding: 30px 20px; }
+            .label { width: 40%; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <img src="WhatsApp Image 2026-04-14 at 14.32.21.jpeg" alt="Daffa Profile" class="profile-img">
-        <h1>Daffa Muhammad Safwan</h1>
-        <p style="color: var(--accent-blue); font-size: 0.9rem;">Digital Business Student</p>
-    </div>
-
-    <div class="bio-box">
-        🚀 Fokus mengembangkan bisnis <b>jual beli & joki game</b> melalui transformasi strategi digital yang sistematis.
-    </div>
-
-    <div class="info-grid">
-        <div class="info-item">
-            <span>Kelahiran</span>
-            <p>Medan, 09 Jan 2007</p>
-        </div>
-        <div class="info-item">
-            <span>Lokasi</span>
-            <p>Medan Helvetia</p>
-        </div>
-        <div class="info-item">
-            <span>Cita-cita</span>
-            <p>Pebisnis Sukses</p>
-        </div>
-    </div>
-
-    <div class="interest-section">
-        <div class="interest-card">
-            <h3><i class="fas fa-gamepad"></i> Hobi Utama</h3>
-            <div class="list-item">
-                <i class="fas fa-shuttlecock" style="color: #fbbf24;"></i>
-                <span>Badminton (Olahraga)</span>
+    <div class="container">
+        <header>
+            <div class="profile-container">
+                <img src="foto-daffa.jpg" alt="Daffa Muhammad Safwan" class="profile-img">
             </div>
-            <div class="list-item">
-                <i class="fas fa-book-open" style="color: #60a5fa;"></i>
-                <span>Membaca Novel</span>
-            </div>
-            <div class="list-item">
-                <i class="fas fa-vr-cardboard" style="color: #f87171;"></i>
-                <span>Gaming & Esport</span>
-            </div>
+            <h1>Halo, saya <span class="highlight">Daffa Muhammad Safwan</span></h1>
+            <div class="badge">Digital Business Student</div>
+        </header>
+
+        <div class="section">
+            <h2>Alasan Masuk Bisnis Digital</h2>
+            <p>
+                Saya memilih jurusan ini karena saya memiliki visi besar untuk <span>mengembangkan bisnis</span> yang sedang saya rintis, yaitu <span>jual beli akun game</span> serta menyediakan <span>jasa joki akun game</span> secara profesional dan terpercaya di masa depan.
+            </p>
         </div>
 
-        <div class="interest-card fav">
-            <h3><i class="fas fa-heart"></i> Favorit</h3>
-            <div class="list-item">
-                <i class="fas fa-utensils" style="color: #fb923c;"></i>
-                <span><b>Makanan:</b> Rendang</span>
+        <div class="section">
+            <h2>Data Pribadi</h2>
+            <table class="info-table">
+                <tr>
+                    <td class="label">Tempat, Tgl Lahir</td>
+                    <td>Medan, 09 Januari 2007</td>
+                </tr>
+                <tr>
+                    <td class="label">Alamat</td>
+                    <td>Jl. Imam Gang Kasim No.36E - Tanjung Gusta Medan Helvetia, Kota Medan</td>
+                </tr>
+                <tr>
+                    <td class="label">Cita-cita</td>
+                    <td>Menjadi Pebisnis yang Handal</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid-info">
+            <div class="card">
+                <h3>Hobi</h3>
+                <ul>
+                    <li>Bermain Badminton</li>
+                    <li>Membaca Novel</li>
+                    <li>Bermain Game</li>
+                </ul>
             </div>
-            <div class="list-item">
-                <i class="fas fa-glass-martini-alt" style="color: #4ade80;"></i>
-                <span><b>Minuman:</b> Jus Alpukat</span>
-            </div>
-            <div class="list-item">
-                <i class="fas fa-star" style="color: #facc15;"></i>
-                <span><b>Genre:</b> Action & Bisnis</span>
+            <div class="card">
+                <h3>Kesukaan</h3>
+                <ul>
+                    <li>Makanan: Rendang</li>
+                    <li>Minuman: Jus Alpukat</li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <p>Dibuat untuk Profil Mahasiswa Bisnis Digital &copy; 2026</p>
+        <footer>
+            <p>&copy; 2026 Daffa Muhammad Safwan. All Rights Reserved.</p>
+        </footer>
     </div>
-</div>
 
 </body>
 </html>
