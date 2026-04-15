@@ -4,48 +4,145 @@
     <meta charset="UTF-8">
     <title>Biodata Daffa Muhammad Safwan</title>
     <style>
+        /* Variabel Warna untuk memudahkan penggantian */
+        :root {
+            --primary-color: #2c3e50; /* Biru Gelap Profesional */
+            --secondary-color: #3498db; /* Biru Cerah */
+            --accent-color: #27ae60; /* Hijau Bisnis */
+            --bg-color: #f0f3f5; /* Background Abu-abu sangat muda */
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
+
         .container {
-            max-width: 800px;
-            background: white;
+            max-width: 850px;
+            background: var(--white);
             margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 10px solid var(--secondary-color);
         }
+
         .header {
             text-align: center;
+            margin-bottom: 30px;
         }
+
+        /* Judul Tengah dengan Warna Gradasi */
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            background: linear-gradient(120deg, var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Styling Foto */
         img {
             display: block;
-            margin: 20px auto;
-            max-width: 300px;
-            border-radius: 10px;
+            margin: 0 auto 30px;
+            max-width: 250px;
+            border-radius: 50%; /* Membuat foto melingkar */
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
+
+        img:hover {
+            transform: scale(1.05); /* Efek membesar saat kursor di atas foto */
+        }
+
+        /* Paragraf Alasan */
+        p {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        /* Tabel Data Diri dengan Warna */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 30px 0;
+            background-color: var(--white);
         }
-        table, th, td {
-            border: 1px solid #ddd;
+
+        table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        th, td {
-            padding: 12px;
-            text-align: left;
+
+        table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
         }
-        th {
-            background-color: #f2f2f2;
+
+        /* Warna Baris Selang-seling */
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
-        .highlight {
+
+        table tr:hover {
+            background-color: #f1f7ff; /* Highlight saat baris disentuh */
+        }
+
+        /* List Styling */
+        .list-section {
+            background: linear-gradient(to right, #ffffff, #f1f1f1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        /* Bullet point kustom berwarna */
+        ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
             font-weight: bold;
-            color: #2c3e50;
+        }
+
+        .highlight-text {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
         }
     </style>
 </head>
@@ -53,52 +150,50 @@
 
 <div class="container">
     <div class="header">
-        <h1>Halo, saya <span style="color: #3498db;">Daffa Muhammad Safwan</span></h1>
+        <h1>Halo, saya <span>Daffa Muhammad Safwan</span></h1>
     </div>
 
-    <img src="https://github.com/daffasafwan9-code/biodatadaffa/blob/main/WhatsApp%20Image%202026-04-14%20at%2014.32.21.jpeg"
+    <img src="WhatsApp Image 2026-04-14 at 14.32.21.jpeg" alt="Foto Daffa">
 
     <p>
-        <span class="highlight">Alasan saya masuk jurusan Bisnis Digital:</span> 
-        Saya memiliki visi besar untuk mengembangkan bisnis saya yang sudah berjalan, yaitu <span>jual beli akun game dan jasa joki akun game</span>. Saya percaya dengan ilmu bisnis digital, saya bisa membawa usaha ini ke level yang lebih profesional.
+        <span class="highlight-text">Alasan Masuk Bisnis Digital:</span> 
+        Saya ingin mengembangkan bisnis saya yang bergerak di bidang <span class="highlight-text">jual beli akun game</span> serta <span class="highlight-text">jasa joki game</span> agar lebih sistematis dan memiliki jangkauan pasar yang lebih luas melalui strategi digital.
     </p>
 
     <table>
-        <tr>
-            <th>Kategori</th>
-            <th>Keterangan</th>
-        </tr>
-        <tr>
-            <td>Tempat, Tanggal Lahir</td>
-            <td>Medan, 09 Januari 2007</td>
-        </tr>
-        <tr>
-            <td>Alamat</td>
-            <td>Jalan Imam Gang Kasim No.36E - Tanjung Gusta, Medan Helvetia, Kota Medan</td>
-        </tr>
-        <tr>
-            <td>Cita-cita</td>
-            <td>Menjadi pebisnis yang handal</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Data Pribadi</th>
+                <th>Informasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Lahir</strong></td>
+                <td>Medan, 09 Januari 2007</td>
+            </tr>
+            <tr>
+                <td><strong>Alamat</strong></td>
+                <td>Jl. Imam Gg. Kasim No.36E, Tj. Gusta, Medan Helvetia</td>
+            </tr>
+            <tr>
+                <td><strong>Cita-cita</strong></td>
+                <td>Pebisnis Handal & Sukses</td>
+            </tr>
+        </tbody>
     </table>
 
-    <div class="hobi-section">
+    <div class="list-section">
         <h3>Hobi & Favorit</h3>
         <ul>
-            <li><strong>Makanan Favorit:</strong> Rendang</li>
-            <li><strong>Minuman Favorit:</strong> Jus Alpukat</li>
-            <li><strong>Hobi:</strong> 
-                <ul>
-                    <li>Bermain Badminton</li>
-                    <li>Membaca Novel</li>
-                    <li>Bermain Game</li>
-                </ul>
-            </li>
+            <li><strong>Makanan:</strong> Rendang</li>
+            <li><strong>Minuman:</strong> Jus Alpukat</li>
+            <li><strong>Hobi Utama:</strong> Badminton, Membaca Novel, dan Gaming</li>
         </ul>
     </div>
 
-    <div class="header">
-        <p><em>"Berusaha hari ini untuk masa depan yang gemilang."</em></p>
+    <div class="footer">
+        <p>&copy; 2026 Daffa Muhammad Safwan - Digital Business Student</p>
     </div>
 </div>
 
